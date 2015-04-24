@@ -20,9 +20,6 @@
       var canvasEl = document.getElementsByTagName("canvas")[0];
       var gameView = new window.ShipOut.GameView(canvasEl.getContext("2d"));
       var whirlpool = window.ShipOut.whirlpoolImage = new Image();
-<<<<<<< HEAD
-      whirlpool.src = "img/orangeWhirlpool.png";
-=======
       whirlpool.src = "img/blueWhirlpool2.png";
       var plank = window.ShipOut.plankImage = new Image();
       plank.src = "img/bigship.png";
@@ -33,7 +30,6 @@
       var bg = window.ShipOut.backgroundImage = new Image();
       bg.src = "img/wavesBG.png";
 
->>>>>>> master
       whirlpool.onload = function() {
         gameView.start();
       };
