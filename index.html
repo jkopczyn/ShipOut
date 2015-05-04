@@ -19,19 +19,19 @@
     <script>
       var canvasEl = document.getElementsByTagName("canvas")[0];
       var gameView = new window.ShipOut.GameView(canvasEl.getContext("2d"));
-      var whirlpool = window.ShipOut.whirlpoolImage = new Image();
-      whirlpool.src = "img/blueWhirlpool2.png";
-      var plank = window.ShipOut.plankImage = new Image();
-      plank.src = "img/bigship.png";
-      var block = window.ShipOut.blockImage = new Image();
-      block.src = "img/canoe.png";
-      var ball = window.ShipOut.ballImage = new Image();
-      ball.src = "img/cannonball.png";
       var bg = window.ShipOut.backgroundImage = new Image();
       bg.src = "img/wavesBG.png";
+      //var whirlpool = window.ShipOut.whirlpoolImage = new Image();
+      //whirlpool.src = "img/blueWhirlpool2.png";
+      //var plank = window.ShipOut.plankImage = new Image();
+      //plank.src = "img/bigship.png";
+      //var block = window.ShipOut.blockImage = new Image();
+      //block.src = "img/canoe.png";
+      //var ball = window.ShipOut.ballImage = new Image();
+      //ball.src = "img/cannonball.png";
 
-      whirlpool.onload = function() {
-        gameView.start();
+      bg.onload = function() {
+        gameView.splashScreen();
       };
     </script>
     <div width="30" height="30"></div>
