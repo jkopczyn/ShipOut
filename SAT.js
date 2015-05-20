@@ -162,7 +162,23 @@
     this['y'] *= y || x;
     return this; 
   };
-  
+
+  // Scale this vector with rounding. An independant scaling factor can be provided
+  // for each axis, or a single scaling factor that will scale both `x` and `y`.
+  /**
+   * @param {number} min Number of digits to keep after the decimal point
+   * @param {number} x The scaling factor in the x direction, default 1.
+   * @param {?number=} y The scaling factor in the y direction.  If this
+   *   is not specified, the x scaling factor will be used.
+   * @return {Vector} This for chaining.
+   */
+  Vector.prototype['scaleRound'] = Vector.prototype.scaleRound = function(min, x,y) {
+    this['x'] = Math.round10(this['x']*(x || 1), -1*min);
+    this['y'] = Math.round10(this['y']*(y || x || 1), -1*min);
+    return this; 
+  };
+ 
+
   // Project this vector on to another vector.
   /**
    * @param {Vector} other The vector to project onto.
